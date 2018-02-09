@@ -1,0 +1,87 @@
+/********** navbar example 1 **********/
+/* navbar container */
+.nav-v1 {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 4.3rem;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* displays unordered nav list evenly with space between each list */
+.nav-v1 ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* keeps nav list horizontal */
+.nav-v1 li {
+  display: inline-block;
+}
+
+/* nav link styling */
+.nav-v1 li a {
+  display: block;
+  border: 2px solid transparent;
+  margin: 1rem;
+  padding: 0.625rem 1rem;
+  text-decoration: none;
+}
+
+/* nav link styling on hover */
+.nav-v1 li a:hover {
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+}
+
+/* nav link will remain white even after link has been visited instead of default purple*/
+.nav-v1 li a:visited {
+  color: #ffffff;
+}
+
+/* the active class + jquery will stay active as long as the section that was scrolled to is visible */
+.active {
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  color: #000000 !important;
+}
+
+/* place holder logo */
+.logo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 1rem;
+  width: 9rem;
+  height: 4.3rem;
+  color: white;
+}
+
+/* keeps links organized on right side of screen*/
+.nav-links-container {
+  /* did not set width to allow for flexability depending on text length of link */
+  height: 4.3rem;
+  position: relative;
+  right: 2rem;
+  padding: 0 .4rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* it is what it sounds like, a dropdown button */
+.dropdown-button {
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+  padding: 0 .4rem;
+  border: none;
+  cursor: pointer;
+}
