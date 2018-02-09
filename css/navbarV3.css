@@ -1,7 +1,8 @@
 /********** navbar example 1 **********/
 /* navbar container */
-.nav-v1 {
+.nav-v3 {
   position: fixed;
+  top: 20rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,7 +13,7 @@
 }
 
 /* displays unordered nav list evenly with space between each list */
-.nav-v1 ul {
+.nav-v3 ul {
   list-style-type: none;
   display: flex;
   align-items: center;
@@ -20,36 +21,45 @@
 }
 
 /* keeps nav list horizontal */
-.nav-v1 li {
+.nav-v3 li {
   display: inline-block;
-}
-
-/* nav link styling */
-.nav-v1 li a {
-  display: block;
-  border: 2px solid transparent;
-  margin: 1rem;
-  padding: 0.625rem 1rem;
+  color: tomato;
   text-decoration: none;
 }
 
+/* nav link styling */
+.nav-v3 li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: lightblue;
+  transition: width .3s;
+}
+
 /* nav link styling on hover */
-.nav-v1 li a:hover {
-  border: 2px solid #ffffff;
-  border-radius: 8px;
+.nav-v3 li a:hover::after {
+  width: 100%;
+  //transition: width .3s;
 }
 
 /* nav link will remain white even after link has been visited instead of default purple*/
-.nav-v1 li a:visited {
+.nav-v3 li a:visited {
   color: #ffffff;
 }
 
 /* the active class + jquery will stay active as long as the section that was scrolled to is visible */
 .active {
-  background-color: #ffffff;
+  /* background-color: #ffffff;
   border: 2px solid #ffffff;
   border-radius: 8px;
-  color: #000000 !important;
+  color: #000000 !important; */
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: lightblue;
+  transition: width .3s;
 }
 
 /* place holder logo */

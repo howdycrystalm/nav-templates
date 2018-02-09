@@ -23,6 +23,7 @@ $(document).ready(function() {
   });
 });
 
+/********** navbar v1 animation **********/
 function onScroll(event) {
   var scrollPos = $(document).scrollTop();
   $('.nav-v1 li a').each(function() {
@@ -33,6 +34,42 @@ function onScroll(event) {
       refElement.position().top + refElement.height() > scrollPos
     ) {
       $('.nav-v1 ul li a').removeClass('active');
+      currLink.addClass('active');
+    } else {
+      currLink.removeClass('active');
+    }
+  });
+}
+
+/********** navbar v2 animation **********/
+function onScroll(event) {
+  var scrollPos = $(document).scrollTop();
+  $('.nav-v2 li a').each(function() {
+    var currLink = $(this);
+    var refElement = $(currLink.attr('href'));
+    if (
+      refElement.position().top <= scrollPos &&
+      refElement.position().top + refElement.height() > scrollPos
+    ) {
+      $('.nav-v2 ul li a').removeClass('active');
+      currLink.addClass('active');
+    } else {
+      currLink.removeClass('active');
+    }
+  });
+}
+
+/********** navbar v3 animation **********/
+function onScroll(event) {
+  var scrollPos = $(document).scrollTop();
+  $('.nav-v3 li a').each(function() {
+    var currLink = $(this);
+    var refElement = $(currLink.attr('href'));
+    if (
+      refElement.position().top <= scrollPos &&
+      refElement.position().top + refElement.height() > scrollPos
+    ) {
+      $('.nav-v3 ul li a').removeClass('active');
       currLink.addClass('active');
     } else {
       currLink.removeClass('active');
