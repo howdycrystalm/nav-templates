@@ -50,16 +50,16 @@
 
 /* the active class + jquery will stay active as long as the section that was scrolled to is visible */
 .active {
-  /* background-color: #ffffff;
+  background-color: #ffffff;
   border: 2px solid #ffffff;
   border-radius: 8px;
-  color: #000000 !important; */
-  content: '';
+  color: #000000 !important;
+  /* content: '';
   display: block;
   width: 0;
   height: 2px;
   background: lightblue;
-  transition: width .3s;
+  transition: width .3s; */
 }
 
 /* place holder logo */
